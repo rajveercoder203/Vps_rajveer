@@ -1,0 +1,28 @@
+echo "
+$$$$$$$\   $$$$$$\     $$$$$\ $$\    $$\ $$$$$$$$\ $$$$$$$$\ $$$$$$$\  
+$$  __$$\ $$  __$$\    \__$$ |$$ |   $$ |$$  _____|$$  _____|$$  __$$\ 
+$$ |  $$ |$$ /  $$ |      $$ |$$ |   $$ |$$ |      $$ |      $$ |  $$ |
+$$$$$$$  |$$$$$$$$ |      $$ |\$$\  $$  |$$$$$\    $$$$$\    $$$$$$$  |
+$$  __$$< $$  __$$ |$$\   $$ | \$$\$$  / $$  __|   $$  __|   $$  __$$< 
+$$ |  $$ |$$ |  $$ |$$ |  $$ |  \$$$  /  $$ |      $$ |      $$ |  $$ |
+$$ |  $$ |$$ |  $$ |\$$$$$$  |   \$  /   $$$$$$$$\ $$$$$$$$\ $$ |  $$ |
+\__|  \__|\__|  \__| \______/     \_/    \________|\________|\__|  \__|"
+echo "rajveer vps"                                                                                                                                              
+# Create a working directory
+mkdir -p ~/RAJVEER_VPS && cd ~/RAJVEER_VPS
+
+# Set a custom shell prompt to mimic root@RAJVEER
+echo 'export PS1="root@RAJVEER:~# "' >> ~/.bashrc && source ~/.bashrc
+
+# Create some fake system folders
+mkdir -p etc var log home/root
+
+# Simulate a welcome message
+echo "Welcome to RAJVEER's VPS!" > /etc/motd
+cat /etc/motd
+
+# Optional: install basic tools if supported
+npm install -g neofetch || echo "neofetch not available"
+
+# Final touch
+echo "✅ VPS environment simulated. You are now root@RAJVEER"
