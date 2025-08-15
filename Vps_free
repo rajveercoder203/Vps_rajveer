@@ -1,0 +1,8 @@
+docker run -dit \
+  --name codesnadbod \
+  --hostname rajveer \
+  --memory=7900m \
+  --cpus=3 \
+  --storage-opt size=100G \
+  --user root \
+  ubuntu bash
